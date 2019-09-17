@@ -16,11 +16,13 @@ class Queue:
   # Should remove and return an item from the front of the queue
   def dequeue(self):
     # value = self.storage.remove_from_head()
-    if self.size > 0: 
+    # if self.size > 0: 
+    #   self.size -= 1
+    #   return self.storage.remove_from_head()
+    # or below
+    if len() > 0:
       self.size -= 1
       return self.storage.remove_from_head()
-     
-
   #return the number of items in the queue
   def len(self):
     return self.size
