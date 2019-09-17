@@ -1,2 +1,2 @@
 
-    self.assertEqual(self.q.len(), 1)
+    self.q.enqueue(8)
