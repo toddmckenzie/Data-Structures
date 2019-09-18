@@ -55,26 +55,6 @@ class DoublyLinkedList:
     
     self.length += 1
 
-  # def remove_from_head(self):
-  #   pass
-
-  # def add_to_tail(self, value):
-  #   pass
-
-  # def remove_from_tail(self):
-  #   pass
-
-  # def move_to_front(self, node):
-  #   pass
-
-  # def move_to_end(self, node):
-  #   pass
-
-  # def delete(self, node):
-  #   pass
-    
-  # def get_max(self):
-  #   pass
   def remove_from_head(self):
     value = self.head.value
     self.delete(self.head)
