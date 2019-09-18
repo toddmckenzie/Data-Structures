@@ -52,6 +52,6 @@ class LRUCache:
       self.order.remove_from_tail()
       self.size -= 1
 
-    self.order.add_to_head(key, value)
-    self.storage[key] = value
+    self.order.add_to_head([key, value])
+    self.storage[key] = self.order.head
     self.size += 1
