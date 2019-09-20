@@ -70,20 +70,26 @@ class BinarySearchTree:
     # while node:
     #Ccreate queue//
     ##while loop;; pop item//
-
+    pass
 
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
   def dft_print(self, node):
-    # create stack. 
+    stack = Stack(self.value)
+    while stack:
+      print(stack.pop())
+      if self.left:
+        stack.push(self.left)
+      if self.right:
+        stack.push(self.right)
+        # create stack. 
     # put root in stack, 
     # while stack is not empty.
     # pop first item in stack
     # check root.left and put in stack
     # check root.right and put in stack
     # go to top of stack and continue.
-   
 
 
 
@@ -102,10 +108,10 @@ class BinarySearchTree:
 
   def in_order_dft(self,node):
     pass
-# Should have the methods `insert`, `contains`, `get_max`.
-#   * `insert` adds the input value to the binary search tree, adhering to the rules of the ordering of elements in a binary search tree.
-#   * `contains` searches the binary search tree for the input value, returning a boolean indicating whether the value exists in the tree or not.
-#   * `get_max` returns the maximum value in the binary search tree. //needs to keep going right
-#   * `for_each` performs a traversal of _every_ node in the tree, executing the passed-in callback function on each tree node value. There is a myriad of ways to perform tree traversal; in this case any of them should work. 
+    # Should have the methods `insert`, `contains`, `get_max`.
+    #   * `insert` adds the input value to the binary search tree, adhering to the rules of the ordering of elements in a binary search tree.
+    #   * `contains` searches the binary search tree for the input value, returning a boolean indicating whether the value exists in the tree or not.
+    #   * `get_max` returns the maximum value in the binary search tree. //needs to keep going right
+    #   * `for_each` performs a traversal of _every_ node in the tree, executing the passed-in callback function on each tree node value. There is a myriad of ways to perform tree traversal; in this case any of them should work. 
 
-# ![Image of Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/300px-Binary_search_tree.svg.png)
+    # ![Image of Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/300px-Binary_search_tree.svg.png)
