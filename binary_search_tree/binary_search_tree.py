@@ -1,7 +1,9 @@
 import sys
 sys.path.append('../queue_and_stack')
-# from dll_queue import Queue
-# from dll_stack import Stack
+from dll_queue import Queue
+from dll_stack import Stack
+
+
 
 class BinarySearchTree:
   def __init__(self, value):
@@ -48,12 +50,58 @@ class BinarySearchTree:
     if self.left:
       self.left.for_each(cb)  
     if self.right:
-      self.left.for_each(cb)
+      self.right.for_each(cb)
+
+ # Print all the values in order from low to high
+    # Hint:  Use a recursive, depth first traversal
+    # was in_order_print
+  def in_order_print(self, node):
+    if node:
+      self.in_order_print(node.left)
+      print(node.value) 
+      self.in_order_print(node.right)
+   
+    # Print the value of every node, starting with the given node,
+    # in an iterative breadth first traversal bv
+  def bft_print(self, node):
+    # node1 = node.left
+    # node2 = node.right
+    # root = node.value
+    # while node:
+    #Ccreate queue//
+    ##while loop;; pop item//
+
+
+
+    # Print the value of every node, starting with the given node,
+    # in an iterative depth first traversal
+  def dft_print(self, node):
+    # create stack. 
+    # put root in stack, 
+    # while stack is not empty.
+    # pop first item in stack
+    # check root.left and put in stack
+    # check root.right and put in stack
+    # go to top of stack and continue.
+   
 
 
 
 
 
+    # STRETCH Goals -------------------------
+    # Note: Research may be required
+
+    # Print In-order recursive DFT
+  def pre_order_dft(self, node):
+    pass
+
+    # Print Post-order recursive DFT
+  def post_order_dft(self, node):
+    pass
+
+  def in_order_dft(self,node):
+    pass
 # Should have the methods `insert`, `contains`, `get_max`.
 #   * `insert` adds the input value to the binary search tree, adhering to the rules of the ordering of elements in a binary search tree.
 #   * `contains` searches the binary search tree for the input value, returning a boolean indicating whether the value exists in the tree or not.
