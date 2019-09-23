@@ -13,7 +13,7 @@ class LRUCache:
     self.storage = dict()
     self.size = 0
     self.limit = limit
-    
+    self.duplicates = 0
     
   """
   Retrieves the value associated with the given key. Also
@@ -55,3 +55,9 @@ class LRUCache:
     self.order.add_to_head([key, value])
     self.storage[key] = self.order.head
     self.size += 1
+
+  def valueGreater(self):
+    for k,v in self.storage:
+      if v > 1:
+        self.duplicates = self.duplicates + 1
+        return k

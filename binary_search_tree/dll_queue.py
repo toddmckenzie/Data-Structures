@@ -20,7 +20,7 @@ class Queue:
     #   self.size -= 1
     #   return self.storage.remove_from_head()
     # or below
-    if len() > 0:
+    if self.size > 0:
       self.size -= 1
       return self.storage.remove_from_head()
   #return the number of items in the queue

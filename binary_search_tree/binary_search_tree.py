@@ -64,13 +64,19 @@ class BinarySearchTree:
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal bv
   def bft_print(self, node):
-    # node1 = node.left
-    # node2 = node.right
-    # root = node.value
-    # while node:
-    #Ccreate queue//
-    ##while loop;; pop item//
-    pass
+    queue = Queue()
+    queue.enqueue(node)
+    while queue.len() > 0:
+      awesome_node = queue.dequeue()
+      print(awesome_node.value)
+      if awesome_node.left:
+        queue.enqueue(awesome_node.left)
+      if awesome_node.right:
+        queue.enqueue(awesome_node.right)  
+      
+   
+
+    
 
 
     # Print the value of every node, starting with the given node,
