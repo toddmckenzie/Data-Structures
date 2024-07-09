@@ -1,5 +1,5 @@
 import unittest
-from queue import Queue
+from dll_queue import Queue
 
 class QueueTests(unittest.TestCase):
   def setUp(self):
@@ -24,7 +24,7 @@ class QueueTests(unittest.TestCase):
     self.assertEqual(self.q.len(), 9)
   
   def test_empty_dequeue(self):
-    self.assertIsNone(self.q.dequeue())
+    self.assertIsNone(self.q.dequeue()) 
     self.assertEqual(self.q.len(), 0)
 
   def test_dequeue_respects_order(self):
